@@ -1,5 +1,6 @@
 package com.example.sergpetproject;
 
+import com.example.sergpetproject.integration.RandomApiHttpClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SergPetProjectApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SergPetProjectApplication.class, args);
+//        SpringApplication.run(SergPetProjectApplication.class, args);
+        RandomApiHttpClient randomApiHttpClient = new RandomApiHttpClient();
+        System.out.println(randomApiHttpClient.getRandomPersons(10));
     }
 
 }
