@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonNodeToRandomApiResponse {
-   public RandomApiResponse convert(JsonNode jsonNode) {
+    public RandomApiResponse convert(JsonNode jsonNode) {
         JsonNode results = jsonNode.path("results");
         List<Person> personList = new ArrayList<>();
         for (JsonNode personNode : results) {
-           personList.add(getPerson(personNode));
+            personList.add(getPerson(personNode));
         }
         return new RandomApiResponse(personList);
-    } 
+    }
 
     private static Person getPerson(JsonNode personNode) {
         Person person = new Person();

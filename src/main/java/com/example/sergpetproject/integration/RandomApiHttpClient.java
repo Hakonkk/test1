@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
 public class RandomApiHttpClient {
     private static final String RANDOM_API_URL = "https://randomuser.me/api/?results=%s";
     private final ObjectMapper mapper = new ObjectMapper();

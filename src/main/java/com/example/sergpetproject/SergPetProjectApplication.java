@@ -8,9 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SergPetProjectApplication {
 
     public static void main(String[] args) {
-//        SpringApplication.run(SergPetProjectApplication.class, args);
-        RandomApiHttpClient randomApiHttpClient = new RandomApiHttpClient();
-        System.out.println(randomApiHttpClient.getRandomPersons(10));
+        SpringApplication.run(SergPetProjectApplication.class, args);
     }
 
 }
