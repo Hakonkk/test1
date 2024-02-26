@@ -1,8 +1,14 @@
 package com.example.sergpetproject.integration.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "person")
 public class PersonEntity {
     @Id
@@ -13,4 +19,12 @@ public class PersonEntity {
     private String gender;
     @Column(name = "phone")
     private String phone;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_name")
+    private NameEntity name;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_location")
+    private LocationEntity location;
 }
