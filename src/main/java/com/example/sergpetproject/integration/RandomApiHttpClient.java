@@ -4,9 +4,7 @@ import com.example.sergpetproject.converter.JsonNodeToRandomApiResponse;
 import com.example.sergpetproject.integration.dto.RandomApiResponse;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
