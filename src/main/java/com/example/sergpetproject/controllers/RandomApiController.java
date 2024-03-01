@@ -23,13 +23,13 @@ public class RandomApiController {
     }
 
     @PostMapping("/saveAll")
-    @Transactional
-    public ResponseEntity<List<PersonEntity>> createPersons() {
+    public ResponseEntity<List<PersonEntity>> savePersons() {
         List<PersonEntity> savedPersons = randomApiService.saveAllPersons();
         return ResponseEntity.status(HttpStatus.CREATED).body(savedPersons);
     }
+ 
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deletePerson(@PathVariable Long id){
         randomApiService.deletePersonById(id);
         return ResponseEntity.ok().build();
