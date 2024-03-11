@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-streets-table.sql
+  - include:
+      file: db/changelog/changeset/create-locations-table.sql
+  - include:
+      file: db/changelog/changeset/create-names-table.sql
+  - include:
+      file: db/changelog/changeset/create-persons-table.sql
+
+

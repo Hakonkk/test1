@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS persons
     id_location BIGINT NOT NULL REFERENCES locations(id)
 );
 
+
 CREATE TABLE IF NOT EXISTS names
 (
     id    BIGSERIAL PRIMARY KEY NOT NULL,
